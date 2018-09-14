@@ -1,0 +1,31 @@
+.page-body{
+	margin: 0;
+}
+
+.page-header{
+	background-color: #00ffff;
+	width: 100vw;
+	height: 10vh;
+}
+
+.main-wrapper{
+	display: flex;
+
+	.page-main{
+		background-color: #1d852bfd;
+		width: 95vw;
+		height: 80vh;
+	}
+	
+	.shortcuts{
+		background-color: #b11d8cfd;
+		width: 5vw;
+		height: 80vh;
+	}
+}
+
+.page-nav{
+	background-color: #ec3131;
+	width: 100vw;
+	height: 10vh;
+}
