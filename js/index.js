@@ -2,6 +2,7 @@ const ul = document.getElementById('mainList');
 let contactsAmount = 20;
 const apiPromise = fetch(`https://randomuser.me/api/?results=${contactsAmount}&nat=nl`);
 
+
 apiPromise
 .then(data => data.json())
 .then(data => { 
@@ -25,6 +26,15 @@ apiPromise
 		
 		name.appendChild(phoneNumber);
 		phoneNumber.innerText = phone;
-	});
- })
 
+		list.addEventListener('click', () =>  {
+			personDetails(person);
+		});
+	});
+})
+
+const personDetails = (person) => {
+	document.querySelector('#contacts').style.display = "none";
+	document.querySelector('#details').style.display = "block";
+	document.querySelector('#contactPicture').style.backgroundImage = 'url(' + person.picture.large + ')';
+}
