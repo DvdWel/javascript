@@ -1,4 +1,5 @@
 $mainColor: #ffffff;
+$grayText: rgba(0, 0, 0, 0.432);
 
 .page-body{
 	margin: 0;
@@ -65,8 +66,10 @@ $mainColor: #ffffff;
 
 //details of the contact
 .details{
-	
+	margin: 0;
+
 	.details-picture{
+		margin: 0;
 		height: 30vh;
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -76,10 +79,95 @@ $mainColor: #ffffff;
 			margin-top: 10%;
 			margin-left: 6%;
 			width: 30px;
+		}
+	}
+
+	.details-title{
+		margin: 0;
+		padding-left: 5%;
+		height: 13vh;
+		background-color: darken($color: $mainColor, $amount: 6%);
+
+		&__name{
+			margin-top: 0;
+			margin-bottom: 3%;
+			padding-top: 2%;
+			font-size: 180%;
+		}
+
+		&__function{
+			margin-top: 0;
+			font-size: 90%;
+			color: $grayText;
+		}
+	}
+
+	.details-phone{
+		padding-top: 7%;
+		background-color: darken($color: $mainColor, $amount: 3%);
+		height: 20vh;
+		display: flex;
+		flex-direction: row;
+		
+		&__icon{
+			padding-top: 2%;
+			width: 7%;
+			height: 10%;
+			padding-left: 3%;
+			fill: $grayText;
+		}
+		
+		.phone{
+			margin-left: 3%;
 			
+			&__number{
+				margin-top: 0;
+				margin-bottom: 2%;
+				padding-top: 2%;
+			}
+			
+			&__type{
+				margin-bottom: 0;
+				margin-top: 4%;
+				padding-bottom: 9%;
+				font-size: 85%;
+				color: $grayText;
+			}
 		}
 	}
 	
+	.details-email{
+		background-color: darken($color: $mainColor, $amount: 3%);
+		height: 28vh;
+		display: flex;
+		flex-direction: row;
+		
+		&__icon{
+			padding-top: 2%;
+			width: 7%;
+			height: 10%;
+			padding-left: 3%;
+			fill: $grayText;
+		}
+		
+		.email{
+			margin-left: 3%;
+			
+			&__mail{
+				margin-top: 0;
+				margin-bottom: 2%;
+				padding-top: 2%;
+			}
+			
+			&__type{
+				margin-bottom: 0;
+				margin-top: 2%;
+				padding-bottom: 3%;
+				font-size: 85%;
+				color: $grayText;
+			}
+		}
+	}
 }
 
 .page-nav{

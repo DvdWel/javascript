@@ -27,14 +27,23 @@ apiPromise
 		name.appendChild(phoneNumber);
 		phoneNumber.innerText = phone;
 
-		list.addEventListener('click', () =>  {
-			personDetails(person);
+		list.addEventListener('click', () => {
+			personDetails(person, fullName);
 		});
 	});
 })
 
-const personDetails = (person) => {
+const personDetails = (person, name) => {
 	document.querySelector('#contacts').style.display = "none";
 	document.querySelector('#details').style.display = "block";
 	document.querySelector('#contactPicture').style.backgroundImage = 'url(' + person.picture.large + ')';
+	document.querySelector('#detailsName').innerText = name;
+	document.querySelector('#phoneMobile').innerText = person.cell;
+	document.querySelector('#phoneBusiness').innerText = person.phone;
+	document.querySelector('#emailWork').innerText = person.email;
+	document.querySelector('#emailPersonal').innerText = person.email;
+	document.querySelector('#showContacts').addEventListener('click', () => {
+		document.querySelector('#contacts').style.display = "block";
+		document.querySelector('#details').style.display = "none";
+	})
 }
